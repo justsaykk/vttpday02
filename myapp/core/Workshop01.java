@@ -15,7 +15,7 @@ public class Workshop01 {
         System.out.println("Welcome to your shopping cart");
 
         // Declare an empty variable to hold cart items
-        List<String> cart = new LinkedList<String>();
+        List<String> cart = new ArrayList<>();
 
         System.out.printf("Currently your cart has %d items \n", cart.size());
         // Create overarching while loop
@@ -28,8 +28,12 @@ public class Workshop01 {
             // User input Handlers
             switch (userCommand) {
                 case "list":
-                    for (int i = 0; i < cart.size(); i++) {
-                        System.out.printf("%d = %s\n", i, cart.get(i));
+                    if (cart.size() > 0) {
+                        for (int i = 0; i < cart.size(); i++) {
+                            System.out.printf("%d = %s\n", (i + 1), cart.get(i));
+                        }
+                    } else {
+                        System.out.println("Your cart is empty\n");
                     }
                     break;
 
@@ -47,21 +51,17 @@ public class Workshop01 {
                     if (toAdd) {
                         cart.add(input);
                         System.out.printf("%s added to cart\n", input);
-                        System.out.printf("Currently your cart has %d items \n", cart.size());
                     } else
                         break;
                     break;
 
                 case "delete":
-                    String inputDelete = splitString[1];
-                    int index = Integer.parseInt(inputDelete);
-                    if (index < cart.size() || index > cart.size()) {
+                    int index = Integer.parseInt(splitString[1]) - 1;
+                    if (index > cart.size()) {
                         System.out.println("Incorrect item index");
-                        break;
                     } else {
                         System.out.printf("%s removed from cart\n", cart.get(index));
                         cart.remove(index);
-                        System.out.printf("Currently your cart has %d items \n", cart.size());
                     }
                     break;
 
