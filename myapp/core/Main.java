@@ -23,5 +23,10 @@ public class Main {
         // Print out length of Array
         System.out.printf("Length of array is = %d\n", todos.length);
 
+        // Print out length of args array
+        System.out.printf("Length of Args array is =%d\n", args.length);
+        System.out.printf("Index: %d has the value of %s\n", 0, args[0]);
+        System.out.printf("Index: %d has the value of %s\n", 1, args[1]);
+
     }
 }
