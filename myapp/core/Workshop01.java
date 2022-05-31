@@ -30,7 +30,7 @@ public class Workshop01 {
                 case "list":
                     if (cart.size() > 0) {
                         for (int i = 0; i < cart.size(); i++) {
-                            System.out.printf("%d = %s\n", (i + 1), cart.get(i));
+                            System.out.printf("%d. %s\n", (i + 1), cart.get(i));
                         }
                     } else {
                         System.out.println("Your cart is empty\n");
