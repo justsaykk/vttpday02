@@ -2,10 +2,6 @@
 package myapp.core;
 
 import java.io.Console;
-
-/**
- * WhileLoop
- */
 public class WhileLoop {
 
     public static void main(String[] args) {
