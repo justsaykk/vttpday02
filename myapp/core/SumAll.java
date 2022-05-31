@@ -5,10 +5,8 @@ package myapp.core;
 public class SumAll {
     public static void main(String[] args) {
 
-        int size = args.length;
-
         // Convert elements from String to Int
-        int[] newArray = new int[size];
+        int[] newArray = new int[args.length];
         int sum = 0;
 
         for (int i = 0; i < args.length; i++) {
