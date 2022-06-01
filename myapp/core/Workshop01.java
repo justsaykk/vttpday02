@@ -39,16 +39,16 @@ public class Workshop01 {
 
                 case "add":
                     String input = splitString[1];
-                    boolean toAdd = true;
+                    boolean found = false;
                     for (int i = 0; i < cart.size(); i++) {
                         if (input.equals(cart.get(i))) {
                             System.out.printf("You have %s in your cart\n", input);
-                            toAdd = false;
+                            found = true;
                             break;
                         }
                     }
                     ;
-                    if (toAdd) {
+                    if (!found) {
                         cart.add(input);
                         System.out.printf("%s added to cart\n", input);
                     } else
